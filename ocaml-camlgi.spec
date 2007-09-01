@@ -1,13 +1,12 @@
 %define up_name CamlGI
 %define name	ocaml-camlgi
 %define version	0.6
-%define release	%mkrel 1
-%define ocaml_sitelib %(if [ -x /usr/bin/ocamlc ]; then ocamlc -where;fi)/site-lib
+%define release	%mkrel 2
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Summary:	Perl compatibility regular expressions for OCaml
+Summary:	FastCGI and CGI library
 Source: 	http://downloads.sourceforge.net/ocaml-cgi/%{up_name}-%{version}.tar.bz2
 URL:		http://sourceforge.net/projects/ocaml-cgi/
 License:	GPL
@@ -26,6 +25,7 @@ easy to use interface.
 %package devel
 Summary:	Development files for %{name}
 Group:		Development/Other
+Requires:   %{name} = %{version}-%{release}
 
 %description devel
 This package contains the development files needed to build applications
@@ -45,9 +45,13 @@ make install OCAMLFIND_DESTDIR="-destdir %{buildroot}/%{ocaml_sitelib}"
 %clean
 rm -rf %{buildroot}
 
-%files devel
+%files
 %defattr(-,root,root)
 %doc LICENSE README
-%{ocaml_sitelib}/CamlGI
+%dir %{ocaml_sitelib}/CamlGI
+%{ocaml_sitelib}/CamlGI/*.cmi
 
-
+%files devel
+%defattr(-,root,root)
+%{ocaml_sitelib}/CamlGI/*
+%exclude %{ocaml_sitelib}/CamlGI/*.cmi
