@@ -14,6 +14,7 @@ Group:		Development/Other
 BuildRequires:	ocaml
 BuildRequires:	camlp4
 BuildRequires:  findlib
+Conflicts:      %{name}-devel < 0.6-2mdv2008.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
