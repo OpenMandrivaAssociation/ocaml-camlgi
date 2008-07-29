@@ -1,7 +1,7 @@
 %define up_name CamlGI
 %define name	ocaml-camlgi
 %define version	0.6
-%define release	%mkrel 3
+%define release	%mkrel 5
 
 Name:		%{name}
 Version:	%{version}
