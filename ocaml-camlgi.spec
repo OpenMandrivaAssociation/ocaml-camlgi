@@ -40,8 +40,8 @@ using %{name}.
 
 %install
 rm -rf %{buildroot}
-install -d -m 755 %{buildroot}/%{ocaml_sitelib}
-make install OCAMLFIND_DESTDIR="-destdir %{buildroot}/%{ocaml_sitelib}"
+install -d -m 755 %{buildroot}/%{_libdir}/ocaml
+make install OCAMLFIND_DESTDIR="-destdir %{buildroot}/%{_libdir}/ocaml"
 
 %clean
 rm -rf %{buildroot}
@@ -49,10 +49,14 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc LICENSE README
-%dir %{ocaml_sitelib}/CamlGI
-%{ocaml_sitelib}/CamlGI/*.cmi
+%dir %{_libdir}/ocaml/CamlGI
+%{_libdir}/ocaml/CamlGI/*.cmi
+%{_libdir}/ocaml/CamlGI/*.cma
+%{_libdir}/ocaml/CamlGI/META
 
 %files devel
 %defattr(-,root,root)
-%{ocaml_sitelib}/CamlGI/*
-%exclude %{ocaml_sitelib}/CamlGI/*.cmi
+%{_libdir}/ocaml/CamlGI/*
+%exclude %{_libdir}/ocaml/CamlGI/*.cmi
+%exclude %{_libdir}/ocaml/CamlGI/*.cma
+%exclude %{_libdir}/ocaml/CamlGI/META
