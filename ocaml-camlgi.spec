@@ -1,7 +1,7 @@
 %define up_name CamlGI
 %define name	ocaml-camlgi
 %define version	0.6
-%define release	%mkrel 6
+%define release	%mkrel 7
 
 Name:		%{name}
 Version:	%{version}
@@ -13,7 +13,7 @@ License:	GPL
 Group:		Development/Other
 BuildRequires:	ocaml
 BuildRequires:	camlp4
-BuildRequires:  findlib
+BuildRequires:  ocaml-findlib
 Conflicts:      %{name}-devel < 0.6-2mdv2008.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
