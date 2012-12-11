@@ -60,3 +60,46 @@ rm -rf %{buildroot}
 %exclude %{_libdir}/ocaml/CamlGI/*.cmi
 %exclude %{_libdir}/ocaml/CamlGI/*.cma
 %exclude %{_libdir}/ocaml/CamlGI/META
+
+
+%changelog
+* Mon Jun 29 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.6-7mdv2010.0
++ Revision: 390539
+- rebuild
+
+  + Florent Monnier <blue_prawn@mandriva.org>
+    - move non-devel files in main package
+    - site-lib hierarchy doesn't exist anymore
+
+* Tue Dec 09 2008 Pixel <pixel@mandriva.com> 0.6-6mdv2009.1
++ Revision: 312247
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.6-5mdv2009.0
++ Revision: 254183
+- rebuild
+
+* Tue Mar 04 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.6-3mdv2008.1
++ Revision: 178363
+- rebuild
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sun Sep 02 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.6-2mdv2008.0
++ Revision: 78166
+- add conflict to help upgrade
+- fix summary
+  drop macro definition, now in rpm-mandriva-setup
+  ship .cmi file in non-devel subpackage
+
+
+* Mon Feb 19 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.6-1mdv2007.0
++ Revision: 122827
+
+* Mon Feb 19 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.6-1mdv2007.1
+- first mdv release
+
