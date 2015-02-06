@@ -6,7 +6,7 @@
 Summary:	FastCGI and CGI library
 Name:		ocaml-camlgi
 Version:	0.6
-Release:	8
+Release:	9
 License:	LGPLv2.1+
 Group:		Development/Other
 Url:		http://sourceforge.net/projects/ocaml-cgi/
