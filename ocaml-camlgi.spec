@@ -9,7 +9,7 @@ Version:	0.6
 Release:	9
 License:	LGPLv2.1+
 Group:		Development/Other
-Url:		http://sourceforge.net/projects/ocaml-cgi/
+Url:		https://sourceforge.net/projects/ocaml-cgi/
 Source0:	http://downloads.sourceforge.net/ocaml-cgi/%{modname}-%{version}.tar.bz2
 BuildRequires:	camlp4
 BuildRequires:	ocaml
