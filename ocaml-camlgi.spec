@@ -11,6 +11,7 @@ License:	LGPLv2.1+
 Group:		Development/Other
 Url:		https://sourceforge.net/projects/ocaml-cgi/
 Source0:	http://downloads.sourceforge.net/ocaml-cgi/%{modname}-%{version}.tar.bz2
+BuildRequires:	make
 BuildRequires:	camlp4
 BuildRequires:	ocaml
 BuildRequires:	ocaml-findlib
